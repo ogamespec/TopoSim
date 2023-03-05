@@ -81,7 +81,7 @@
 			// loadImageToolStripMenuItem
 			// 
 			loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
-			loadImageToolStripMenuItem.Size = new Size(180, 22);
+			loadImageToolStripMenuItem.Size = new Size(145, 22);
 			loadImageToolStripMenuItem.Text = "Load Image...";
 			loadImageToolStripMenuItem.Click += loadImageToolStripMenuItem_Click;
 			// 
@@ -133,6 +133,7 @@
 			// 
 			// pictureBox1
 			// 
+			pictureBox1.BackColor = Color.Black;
 			pictureBox1.Dock = DockStyle.Fill;
 			pictureBox1.Location = new Point(0, 49);
 			pictureBox1.Name = "pictureBox1";
