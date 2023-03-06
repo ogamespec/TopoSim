@@ -23,9 +23,11 @@ module fet_test ();
 	FET_TestVectorGenerator test_vector1 (.clk(CLK), .g(GateN), .a(LeftWireN), .b(RightWireN), .cnt_out(cnt_out) );
 	FET_TestVectorGenerator test_vector2 (.clk(CLK), .g(GateP), .a(LeftWireP), .b(RightWireP) );
 
-	wire nor_out;
+	wire out1;
+	wire out2;
 
-	sim_nor my_nor (.x(nor_out), .a(cnt_out[0]), .b(cnt_out[1]) );
+	nmos_nor my_nmos_nor (.x(out1), .a(cnt_out[0]), .b(cnt_out[1]) );
+	cmos_nor my_cmos_nor (.x(out2), .a(cnt_out[0]), .b(cnt_out[1]) );
 
 	initial begin
 

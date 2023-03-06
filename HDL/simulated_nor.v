@@ -1,5 +1,19 @@
 
-module sim_nor (x, a, b);
+module nmos_nor (x, a, b);
+
+	output x;
+	input a;
+	input b;
+
+	wire gnd = 1'b0;
+
+	nfet g1 (.g(a), .a(gnd), .b(x) );
+	nfet g2 (.g(b), .a(gnd), .b(x) );
+	dfet g3 (.x(x));
+
+endmodule // nmos_nor
+
+module cmos_nor (x, a, b);
 
 	output x;
 	input a;
@@ -14,4 +28,4 @@ module sim_nor (x, a, b);
 	pfet g3 (.g(a), .a(vdd), .b(g3out) );
 	pfet g4 (.g(b), .a(g3out), .b(x) );
 
-endmodule // sim_nor
+endmodule // cmos_nor
