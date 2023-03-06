@@ -9,6 +9,8 @@ module fet_test ();
 
 	wire [3:0] cnt_out;
 
+	// Test base
+
 	wire GateN;
 	wire LeftWireN;
 	wire RightWireN;
@@ -23,11 +25,26 @@ module fet_test ();
 	FET_TestVectorGenerator test_vector1 (.clk(CLK), .g(GateN), .a(LeftWireN), .b(RightWireN), .cnt_out(cnt_out) );
 	FET_TestVectorGenerator test_vector2 (.clk(CLK), .g(GateP), .a(LeftWireP), .b(RightWireP) );
 
+	// Test comb
+
 	wire out1;
 	wire out2;
 
 	nmos_nor my_nmos_nor (.x(out1), .a(cnt_out[0]), .b(cnt_out[1]) );
 	cmos_nor my_cmos_nor (.x(out2), .a(cnt_out[0]), .b(cnt_out[1]) );
+
+	// Test seq
+
+	wire q1;
+	wire nq1;
+	wire q2;
+	wire nq2;
+
+	//nmos_rsff my_nmos_rsff (.s(cnt_out[0]), .r(cnt_out[1]), .q(q1), .nq(nq1));
+	//cmos_rsff my_cmos_rsff (.s(cnt_out[0]), .r(cnt_out[1]), .q(q2), .nq(nq2));
+
+	// Icarus Hungs s=r=0
+	//nmos_rsff my_nmos_rsff (.s(1'b0), .r(1'b0), .q(q1), .nq(nq1));
 
 	initial begin
 
@@ -38,9 +55,7 @@ module fet_test ();
 		$dumpfile("fet.vcd");
 		$dumpvars(0, fet_test);
 
-		repeat (32) @ (posedge CLK);
-
-		$finish;
+		#64 $finish;
 	end
 
 endmodule // fet_test

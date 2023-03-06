@@ -20,4 +20,4 @@ module pfet (g, a, b);
 
 	tranif0 pass (a, b, gmem);
 
-endmodule // nfet
+endmodule // pfet
