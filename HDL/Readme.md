@@ -8,6 +8,8 @@ The model is based on the Verilog tranif0/tranif1 primitives, as well as a regul
 
 ## nor
 
+![CMOS-implementation-of-NOR-gate-G-2.png](/imgstore/CMOS-implementation-of-NOR-gate-G-2.png)
+
 ```verilog
 module sim_nor (x, a, b);
 

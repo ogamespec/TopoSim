@@ -8,6 +8,8 @@
 
 ## nor
 
+![CMOS-implementation-of-NOR-gate-G-2.png](/imgstore/CMOS-implementation-of-NOR-gate-G-2.png)
+
 ```verilog
 module sim_nor (x, a, b);
 
