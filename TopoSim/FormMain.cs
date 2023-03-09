@@ -23,7 +23,6 @@ namespace TopoSim
 			if (openFileDialogImage.ShowDialog() == DialogResult.OK)
 			{
 				var image = Image.FromFile(openFileDialogImage.FileName);
-				pictureBox1.Image = image;
 			}
 		}
 	}

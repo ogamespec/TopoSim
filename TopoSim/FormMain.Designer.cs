@@ -29,145 +29,147 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-			menuStrip1 = new MenuStrip();
-			fileToolStripMenuItem = new ToolStripMenuItem();
-			exitToolStripMenuItem = new ToolStripMenuItem();
-			debugToolStripMenuItem = new ToolStripMenuItem();
-			loadImageToolStripMenuItem = new ToolStripMenuItem();
-			helpToolStripMenuItem = new ToolStripMenuItem();
-			aboutToolStripMenuItem = new ToolStripMenuItem();
-			toolStrip1 = new ToolStrip();
-			toolStripButton1 = new ToolStripButton();
-			statusStrip1 = new StatusStrip();
-			toolStripStatusLabel1 = new ToolStripStatusLabel();
-			pictureBox1 = new PictureBox();
-			openFileDialogImage = new OpenFileDialog();
-			menuStrip1.SuspendLayout();
-			toolStrip1.SuspendLayout();
-			statusStrip1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			SuspendLayout();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+			this.openFileDialogImage = new System.Windows.Forms.OpenFileDialog();
+			this.segmentView1 = new System.Windows.Forms.SegmentView();
+			this.menuStrip1.SuspendLayout();
+			this.toolStrip1.SuspendLayout();
+			this.statusStrip1.SuspendLayout();
+			this.SuspendLayout();
 			// 
 			// menuStrip1
 			// 
-			menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, debugToolStripMenuItem, helpToolStripMenuItem });
-			menuStrip1.Location = new Point(0, 0);
-			menuStrip1.Name = "menuStrip1";
-			menuStrip1.Size = new Size(800, 24);
-			menuStrip1.TabIndex = 0;
-			menuStrip1.Text = "menuStrip1";
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.debugToolStripMenuItem,
+            this.helpToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+			this.menuStrip1.TabIndex = 0;
+			this.menuStrip1.Text = "menuStrip1";
 			// 
 			// fileToolStripMenuItem
 			// 
-			fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
-			fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			fileToolStripMenuItem.Size = new Size(37, 20);
-			fileToolStripMenuItem.Text = "File";
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Text = "File";
 			// 
 			// exitToolStripMenuItem
 			// 
-			exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			exitToolStripMenuItem.Size = new Size(93, 22);
-			exitToolStripMenuItem.Text = "Exit";
-			exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+			this.exitToolStripMenuItem.Text = "Exit";
 			// 
 			// debugToolStripMenuItem
 			// 
-			debugToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadImageToolStripMenuItem });
-			debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-			debugToolStripMenuItem.Size = new Size(54, 20);
-			debugToolStripMenuItem.Text = "Debug";
+			this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadImageToolStripMenuItem});
+			this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+			this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+			this.debugToolStripMenuItem.Text = "Debug";
 			// 
 			// loadImageToolStripMenuItem
 			// 
-			loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
-			loadImageToolStripMenuItem.Size = new Size(145, 22);
-			loadImageToolStripMenuItem.Text = "Load Image...";
-			loadImageToolStripMenuItem.Click += loadImageToolStripMenuItem_Click;
+			this.loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
+			this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+			this.loadImageToolStripMenuItem.Text = "Load Image...";
 			// 
 			// helpToolStripMenuItem
 			// 
-			helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
-			helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			helpToolStripMenuItem.Size = new Size(44, 20);
-			helpToolStripMenuItem.Text = "Help";
+			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+			this.helpToolStripMenuItem.Text = "Help";
 			// 
 			// aboutToolStripMenuItem
 			// 
-			aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			aboutToolStripMenuItem.Size = new Size(107, 22);
-			aboutToolStripMenuItem.Text = "About";
-			aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+			this.aboutToolStripMenuItem.Text = "About";
 			// 
 			// toolStrip1
 			// 
-			toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1 });
-			toolStrip1.Location = new Point(0, 24);
-			toolStrip1.Name = "toolStrip1";
-			toolStrip1.Size = new Size(800, 25);
-			toolStrip1.TabIndex = 1;
-			toolStrip1.Text = "toolStrip1";
+			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+			this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+			this.toolStrip1.TabIndex = 1;
+			this.toolStrip1.Text = "toolStrip1";
 			// 
 			// toolStripButton1
 			// 
-			toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-			toolStripButton1.ImageTransparentColor = Color.Magenta;
-			toolStripButton1.Name = "toolStripButton1";
-			toolStripButton1.Size = new Size(114, 22);
-			toolStripButton1.Text = "toolStripButton1";
+			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(114, 22);
+			this.toolStripButton1.Text = "toolStripButton1";
 			// 
 			// statusStrip1
 			// 
-			statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-			statusStrip1.Location = new Point(0, 428);
-			statusStrip1.Name = "statusStrip1";
-			statusStrip1.Size = new Size(800, 22);
-			statusStrip1.TabIndex = 2;
-			statusStrip1.Text = "statusStrip1";
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+			this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+			this.statusStrip1.TabIndex = 2;
+			this.statusStrip1.Text = "statusStrip1";
 			// 
 			// toolStripStatusLabel1
 			// 
-			toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-			toolStripStatusLabel1.Size = new Size(118, 17);
-			toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-			// 
-			// pictureBox1
-			// 
-			pictureBox1.BackColor = Color.Black;
-			pictureBox1.Dock = DockStyle.Fill;
-			pictureBox1.Location = new Point(0, 49);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(800, 379);
-			pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-			pictureBox1.TabIndex = 3;
-			pictureBox1.TabStop = false;
+			this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+			this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+			this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
 			// 
 			// openFileDialogImage
 			// 
-			openFileDialogImage.DefaultExt = "png";
-			openFileDialogImage.Filter = "Image files|*.jpg;*.png;*.bmp|All files|*.*";
+			this.openFileDialogImage.DefaultExt = "png";
+			this.openFileDialogImage.Filter = "Image files|*.jpg;*.png;*.bmp|All files|*.*";
+			// 
+			// segmentView1
+			// 
+			this.segmentView1.BackColor = System.Drawing.Color.LightGray;
+			this.segmentView1.Location = new System.Drawing.Point(25, 63);
+			this.segmentView1.Name = "segmentView1";
+			this.segmentView1.Size = new System.Drawing.Size(748, 335);
+			this.segmentView1.TabIndex = 3;
+			this.segmentView1.Text = "segmentView1";
 			// 
 			// FormMain
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
-			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
-			Controls.Add(pictureBox1);
-			Controls.Add(statusStrip1);
-			Controls.Add(toolStrip1);
-			Controls.Add(menuStrip1);
-			MainMenuStrip = menuStrip1;
-			Name = "FormMain";
-			Text = "TopoSim";
-			menuStrip1.ResumeLayout(false);
-			menuStrip1.PerformLayout();
-			toolStrip1.ResumeLayout(false);
-			toolStrip1.PerformLayout();
-			statusStrip1.ResumeLayout(false);
-			statusStrip1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.segmentView1);
+			this.Controls.Add(this.statusStrip1);
+			this.Controls.Add(this.toolStrip1);
+			this.Controls.Add(this.menuStrip1);
+			this.MainMenuStrip = this.menuStrip1;
+			this.Name = "FormMain";
+			this.Text = "TopoSim";
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
+			this.toolStrip1.ResumeLayout(false);
+			this.toolStrip1.PerformLayout();
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
 		}
 
 		#endregion
@@ -183,7 +185,7 @@
 		private ToolStripMenuItem aboutToolStripMenuItem;
 		private ToolStripMenuItem debugToolStripMenuItem;
 		private ToolStripMenuItem loadImageToolStripMenuItem;
-		private PictureBox pictureBox1;
 		private OpenFileDialog openFileDialogImage;
+		private SegmentView segmentView1;
 	}
 }

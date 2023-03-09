@@ -7,5 +7,8 @@
     <Compile Update="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SegmentViewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
