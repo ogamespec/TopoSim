@@ -1,0 +1,58 @@
+{
+
+	"info":
+	{
+		"description": "Demo Topology to debug the simulator (part from VDPs PSG)",
+		"preview": "demo.png"
+	},
+
+	"topo":
+	{
+		"lambda": 5.0,
+		"pie": "P1M1",
+		"fet": "CMOS",
+		"fet_dim": "planar",
+		"wells": "N"
+	},
+
+	"layers":
+	[
+		{
+			"type": "diffusion",
+			"name": "diffusion",
+			"pic": "demo_diffusion.png",
+			"colors": "Yellow"			
+		},
+
+		{
+			"type": "well",
+			"name": "n-pockets",
+			"pic": "demo_wells.png",
+			"colors": "SomeReddish"
+		},
+
+		{
+			"type": "poly",
+			"name": "poly",
+			"pic": "demo_poly.png",
+			"colors": "Purple"
+		},
+
+		{
+			"type": "metal",
+			"name": "m1",
+			"pic": "demo_m1.png",
+			"colors": "Blue",
+			"vdd_colors": "Red",
+			"gnd_colors": "Green"
+		},
+
+		{
+			"type": "vias",
+			"pic": "demo_vias.png",
+			"colors": "Black",
+			"connects": [ ["m1", "poly"], ["m1","diffusion"] ]
+		}
+	]
+
+}
