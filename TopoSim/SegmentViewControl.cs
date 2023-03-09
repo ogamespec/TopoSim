@@ -5,6 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
+using TopoSim;
 
 namespace System.Windows.Forms
 {
@@ -13,19 +14,38 @@ namespace System.Windows.Forms
 		private BufferedGraphics? gfx;
 		private BufferedGraphicsContext? context;
 
+		List<SegmentedLayer> segmentedLayers = new ();
+
 		private bool gdi_init = false;
 
+
+		public void LoadSegmentedLayers (List<SegmentedLayer> layers)
+		{
+			segmentedLayers = layers;
+			Invalidate();
+		}
 
 		public SegmentView()
 		{
 			SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
 		}
 
-		private void DrawPlot (Graphics gr)
+		private void DrawSourceLayers(Graphics gr)
+		{
+			foreach (var seglayer in segmentedLayers)
+			{
+				gr.DrawImage(seglayer.source_layer_image, new Point(0, 0));
+			}
+		}
+
+		private void DrawScene (Graphics gr)
 		{
 			gr.Clear(BackColor);
 
+			if (segmentedLayers.Count == 0)
+				return;
 
+			DrawSourceLayers(gr);
 		}
 
 		protected override void OnPaint(PaintEventArgs e)
@@ -37,7 +57,7 @@ namespace System.Windows.Forms
 
 			if (gfx != null)
 			{
-				DrawPlot(gfx.Graphics);
+				DrawScene(gfx.Graphics);
 				gfx.Render(e.Graphics);
 			}
 		}

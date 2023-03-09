@@ -29,58 +29,59 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
-			pictureBox1 = new PictureBox();
-			label1 = new Label();
-			button1 = new Button();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			SuspendLayout();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.SuspendLayout();
 			// 
 			// pictureBox1
 			// 
-			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(12, 12);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(134, 124);
-			pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-			pictureBox1.TabIndex = 0;
-			pictureBox1.TabStop = false;
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(134, 124);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
 			// 
 			// label1
 			// 
-			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-			label1.Location = new Point(161, 12);
-			label1.Name = "label1";
-			label1.Size = new Size(172, 30);
-			label1.TabIndex = 1;
-			label1.Text = "TopoSim, Layer0";
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+			this.label1.Location = new System.Drawing.Point(161, 12);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(169, 30);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "TopoSim, Layer1";
 			// 
 			// button1
 			// 
-			button1.Location = new Point(395, 155);
-			button1.Name = "button1";
-			button1.Size = new Size(108, 30);
-			button1.TabIndex = 2;
-			button1.Text = "Close";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += button1_Click;
+			this.button1.Location = new System.Drawing.Point(395, 155);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(108, 30);
+			this.button1.TabIndex = 2;
+			this.button1.Text = "Close";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// FormAbout
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
-			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(515, 197);
-			Controls.Add(button1);
-			Controls.Add(label1);
-			Controls.Add(pictureBox1);
-			KeyPreview = true;
-			Name = "FormAbout";
-			StartPosition = FormStartPosition.CenterParent;
-			Text = "About";
-			KeyDown += FormAbout_KeyDown;
-			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(515, 197);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.pictureBox1);
+			this.KeyPreview = true;
+			this.Name = "FormAbout";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.Text = "About";
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAbout_KeyDown);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
 		}
 
 		#endregion

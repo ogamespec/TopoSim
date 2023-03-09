@@ -21,36 +21,36 @@
 			"type": "diffusion",
 			"name": "diffusion",
 			"pic": "demo_diffusion.png",
-			"colors": "Yellow"			
+			"colors": ["Yellow"]
 		},
 
 		{
 			"type": "well",
 			"name": "n-pockets",
 			"pic": "demo_wells.png",
-			"colors": "SomeReddish"
+			"colors": ["SomeReddish"]
 		},
 
 		{
 			"type": "poly",
 			"name": "poly",
 			"pic": "demo_poly.png",
-			"colors": "Purple"
+			"colors": ["Purple"]
 		},
 
 		{
 			"type": "metal",
 			"name": "m1",
 			"pic": "demo_m1.png",
-			"colors": "Blue",
-			"vdd_colors": "Red",
-			"gnd_colors": "Green"
+			"colors": ["Blue"],
+			"vdd_colors": ["Red"],
+			"gnd_colors": ["Green"]
 		},
 
 		{
 			"type": "vias",
 			"pic": "demo_vias.png",
-			"colors": "Black",
+			"colors": ["Black"],
 			"connects": [ ["m1", "poly"], ["m1","diffusion"] ]
 		}
 	]

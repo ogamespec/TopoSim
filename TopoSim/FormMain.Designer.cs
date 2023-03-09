@@ -31,6 +31,8 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.loadTopoJSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +44,7 @@
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.openFileDialogImage = new System.Windows.Forms.OpenFileDialog();
 			this.segmentView1 = new System.Windows.Forms.SegmentView();
+			this.openFileDialogJSON = new System.Windows.Forms.OpenFileDialog();
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
@@ -62,16 +65,31 @@
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadTopoJSONToolStripMenuItem,
+            this.toolStripSeparator1,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "File";
 			// 
+			// loadTopoJSONToolStripMenuItem
+			// 
+			this.loadTopoJSONToolStripMenuItem.Name = "loadTopoJSONToolStripMenuItem";
+			this.loadTopoJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.loadTopoJSONToolStripMenuItem.Text = "Load Topo JSON...";
+			this.loadTopoJSONToolStripMenuItem.Click += new System.EventHandler(this.loadTopoJSONToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// debugToolStripMenuItem
 			// 
@@ -86,6 +104,7 @@
 			this.loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
 			this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
 			this.loadImageToolStripMenuItem.Text = "Load Image...";
+			this.loadImageToolStripMenuItem.Click += new System.EventHandler(this.loadImageToolStripMenuItem_Click_1);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -100,6 +119,7 @@
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
 			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
 			this.aboutToolStripMenuItem.Text = "About";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
 			// toolStrip1
 			// 
@@ -143,11 +163,17 @@
 			// segmentView1
 			// 
 			this.segmentView1.BackColor = System.Drawing.Color.LightGray;
-			this.segmentView1.Location = new System.Drawing.Point(25, 63);
+			this.segmentView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.segmentView1.Location = new System.Drawing.Point(0, 49);
 			this.segmentView1.Name = "segmentView1";
-			this.segmentView1.Size = new System.Drawing.Size(748, 335);
+			this.segmentView1.Size = new System.Drawing.Size(800, 379);
 			this.segmentView1.TabIndex = 3;
 			this.segmentView1.Text = "segmentView1";
+			// 
+			// openFileDialogJSON
+			// 
+			this.openFileDialogJSON.DefaultExt = "json";
+			this.openFileDialogJSON.Filter = "JSON files|*.json|All files|*.*";
 			// 
 			// FormMain
 			// 
@@ -187,5 +213,8 @@
 		private ToolStripMenuItem loadImageToolStripMenuItem;
 		private OpenFileDialog openFileDialogImage;
 		private SegmentView segmentView1;
+		private ToolStripMenuItem loadTopoJSONToolStripMenuItem;
+		private ToolStripSeparator toolStripSeparator1;
+		private OpenFileDialog openFileDialogJSON;
 	}
 }
