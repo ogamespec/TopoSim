@@ -35,7 +35,7 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.loadImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.addTestSegmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -75,36 +75,36 @@
 			// loadTopoJSONToolStripMenuItem
 			// 
 			this.loadTopoJSONToolStripMenuItem.Name = "loadTopoJSONToolStripMenuItem";
-			this.loadTopoJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.loadTopoJSONToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
 			this.loadTopoJSONToolStripMenuItem.Text = "Load Topo JSON...";
 			this.loadTopoJSONToolStripMenuItem.Click += new System.EventHandler(this.loadTopoJSONToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(166, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// debugToolStripMenuItem
 			// 
 			this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadImageToolStripMenuItem});
+            this.addTestSegmentsToolStripMenuItem});
 			this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
 			this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
 			this.debugToolStripMenuItem.Text = "Debug";
 			// 
-			// loadImageToolStripMenuItem
+			// addTestSegmentsToolStripMenuItem
 			// 
-			this.loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
-			this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.loadImageToolStripMenuItem.Text = "Load Image...";
-			this.loadImageToolStripMenuItem.Click += new System.EventHandler(this.loadImageToolStripMenuItem_Click_1);
+			this.addTestSegmentsToolStripMenuItem.Name = "addTestSegmentsToolStripMenuItem";
+			this.addTestSegmentsToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+			this.addTestSegmentsToolStripMenuItem.Text = "Add test segments";
+			this.addTestSegmentsToolStripMenuItem.Click += new System.EventHandler(this.addTestSegmentsToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -162,7 +162,7 @@
 			// 
 			// segmentView1
 			// 
-			this.segmentView1.BackColor = System.Drawing.Color.LightGray;
+			this.segmentView1.BackColor = System.Drawing.Color.DimGray;
 			this.segmentView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.segmentView1.Location = new System.Drawing.Point(0, 49);
 			this.segmentView1.Name = "segmentView1";
@@ -185,6 +185,7 @@
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
+			this.MinimumSize = new System.Drawing.Size(300, 300);
 			this.Name = "FormMain";
 			this.Text = "TopoSim";
 			this.menuStrip1.ResumeLayout(false);
@@ -210,11 +211,11 @@
 		private ToolStripMenuItem helpToolStripMenuItem;
 		private ToolStripMenuItem aboutToolStripMenuItem;
 		private ToolStripMenuItem debugToolStripMenuItem;
-		private ToolStripMenuItem loadImageToolStripMenuItem;
 		private OpenFileDialog openFileDialogImage;
 		private SegmentView segmentView1;
 		private ToolStripMenuItem loadTopoJSONToolStripMenuItem;
 		private ToolStripSeparator toolStripSeparator1;
 		private OpenFileDialog openFileDialogJSON;
+		private ToolStripMenuItem addTestSegmentsToolStripMenuItem;
 	}
 }

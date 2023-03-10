@@ -21,21 +21,30 @@
 			"type": "diffusion",
 			"name": "diffusion",
 			"pic": "demo_diffusion.png",
-			"colors": ["Yellow"]
+			"colors": ["Yellow"],
+			"HatchStyle": "Divot",
+			"BrushBackgroundColor": [ 0, 0, 0, 0],
+			"BrushForegroundColor": [ 0, 0, 0, 0]
 		},
 
 		{
 			"type": "well",
 			"name": "n-pockets",
 			"pic": "demo_wells.png",
-			"colors": ["SomeReddish"]
+			"colors": ["SomeReddish"],
+			"HatchStyle": "Divot",
+			"BrushBackgroundColor": [ 0, 0, 0, 0],
+			"BrushForegroundColor": [ 0, 0, 0, 0]
 		},
 
 		{
 			"type": "poly",
 			"name": "poly",
 			"pic": "demo_poly.png",
-			"colors": ["Purple"]
+			"colors": ["Purple"],
+			"HatchStyle": "Divot",
+			"BrushBackgroundColor": [ 0, 0, 0, 0],
+			"BrushForegroundColor": [ 0, 0, 0, 0]
 		},
 
 		{
@@ -44,14 +53,19 @@
 			"pic": "demo_m1.png",
 			"colors": ["Blue"],
 			"vdd_colors": ["Red"],
-			"gnd_colors": ["Green"]
+			"gnd_colors": ["Green"],
+			"HatchStyle": "Divot",
+			"BrushBackgroundColor": [ 0, 0, 0, 0],
+			"BrushForegroundColor": [ 0, 0, 0, 0]
 		},
 
 		{
 			"type": "vias",
 			"pic": "demo_vias.png",
 			"colors": ["Black"],
-			"connects": [ ["m1", "poly"], ["m1","diffusion"] ]
+			"connects": [ ["m1", "poly"], ["m1","diffusion"] ],
+			"HatchStyle": "Solid",
+			"BrushForegroundColor": [ 0, 0, 0, 0]
 		}
 	]
 

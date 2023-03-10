@@ -21,14 +21,6 @@ namespace TopoSim
 			about.ShowDialog();
 		}
 
-		private void loadImageToolStripMenuItem_Click_1(object sender, EventArgs e)
-		{
-			if (openFileDialogImage.ShowDialog() == DialogResult.OK)
-			{
-				var image = Image.FromFile(openFileDialogImage.FileName);
-			}
-		}
-
 		private void loadTopoJSONToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (openFileDialogJSON.ShowDialog() == DialogResult.OK)
@@ -39,8 +31,14 @@ namespace TopoSim
 				if (layers == null)
 					return;
 
-				segmentView1.LoadSegmentedLayers(layers);
+				segmentView1.LoadSegmentedLayers(layers, false);
 			}
+		}
+
+		private void addTestSegmentsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var layers = Segmentator.CreateDebugSegLayers();
+			segmentView1.LoadSegmentedLayers(layers, true);
 		}
 	}
 }

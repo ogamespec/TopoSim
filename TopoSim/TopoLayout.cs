@@ -34,12 +34,18 @@ namespace TopoSim
 		public string[]? vdd_colors;
 		public string[]? gnd_colors;
 		//public Tuple<string>[]? connects;
+		public string? HatchStyle;
+		public int[]? BrushBackgroundColor;
+		public int[]? BrushForegroundColor;
 	}
 
 	public class TopoLoader
 	{
-		static public List<SegmentedLayer> LoadJson(string json_name)
+		static public List<SegmentedLayer> LoadJson(string? json_name)
 		{
+			if (json_name == null)
+				return new();
+
 			string cwd = Path.GetDirectoryName(json_name);
 
 			string text = File.ReadAllText(json_name, System.Text.Encoding.UTF8);

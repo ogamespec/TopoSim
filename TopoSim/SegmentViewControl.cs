@@ -19,9 +19,16 @@ namespace System.Windows.Forms
 		private bool gdi_init = false;
 
 
-		public void LoadSegmentedLayers (List<SegmentedLayer> layers)
+		public void LoadSegmentedLayers (List<SegmentedLayer> layers, bool add)
 		{
-			segmentedLayers = layers;
+			if (add)
+			{
+				segmentedLayers.AddRange(layers);
+			}
+			else
+			{
+				segmentedLayers = layers;
+			}
 			Invalidate();
 		}
 
@@ -30,11 +37,47 @@ namespace System.Windows.Forms
 			SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
 		}
 
+		private void DrawOrigin(Graphics gr)
+		{
+
+		}
+
+		private void DrawLambdaGrid(Graphics gr)
+		{
+
+		}
+
 		private void DrawSourceLayers(Graphics gr)
 		{
 			foreach (var seglayer in segmentedLayers)
 			{
-				gr.DrawImage(seglayer.source_layer_image, new Point(0, 0));
+				if (seglayer.source_layer_image != null)
+				{
+					gr.DrawImage(seglayer.source_layer_image, new Point(0, 0));
+				}
+			}
+		}
+
+		private void DrawSegments(Graphics gr)
+		{
+			foreach (var seglayer in segmentedLayers)
+			{
+				foreach (var seg in seglayer.segments)
+				{
+					if (seg.rect.Width == 0 || seg.rect.Height == 0)
+						continue;
+
+					if (seg.is_solid_brush)
+					{
+						if (seg.solid_brush != null)
+							gr.FillRectangle(seg.solid_brush, seg.rect);
+					}
+					else
+					{
+						if (seg.hatch_brush != null)
+							gr.FillRectangle(seg.hatch_brush, seg.rect);
+					}
+				}
 			}
 		}
 
@@ -42,10 +85,16 @@ namespace System.Windows.Forms
 		{
 			gr.Clear(BackColor);
 
+			if (Width <= 1 || Height <= 1)
+				return;
+
 			if (segmentedLayers.Count == 0)
 				return;
 
 			DrawSourceLayers(gr);
+			DrawOrigin(gr);
+			DrawSegments(gr);
+			DrawLambdaGrid(gr);
 		}
 
 		protected override void OnPaint(PaintEventArgs e)
@@ -76,6 +125,9 @@ namespace System.Windows.Forms
 
 		private void ReallocateGraphics()
 		{
+			if (Width <= 1 || Height <= 1)
+				return;
+
 			context = BufferedGraphicsManager.Current;
 			context.MaximumBuffer = new Size(Width + 1, Height + 1);
 
